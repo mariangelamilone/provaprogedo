@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+
+{% block contenuto %}
+<h1> Il mio blog</h1>
+
+{% for object in object_list %}
+    <h2>{{ object.title }}</h2>
+    <b>{{ object.category.title }}</b>
+    <p>{{ object.content }}</p>
+    <p>{{ object.date }}</p>
+{% endfor %}
+
+{% comment %}
+    <p>
+        Io sono <b>Monile</b>
+    </p>
+    <p>
+        La mia <a href="/ciao/">prima vista con Django</a>
+    </p>
+{% endcomment %}
+
+{% endblock %}
